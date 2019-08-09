@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo echo $(( $1 * 27 )) > /sys/class/backlight/intel_backlight/brightness
+echo Changed brightness to $1
