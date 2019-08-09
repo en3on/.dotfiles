@@ -79,3 +79,5 @@ source ~/.aliases/index
 # User configuration
 
 export EDITOR=nvim
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
