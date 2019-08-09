@@ -8,3 +8,5 @@ omap / <Plug>(easymotion-tn)
 
 " turn off search highlight
 nnoremap \ :nohlsearch<CR>
+
+" open FZF

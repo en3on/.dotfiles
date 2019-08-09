@@ -15,7 +15,12 @@ call plug#begin()
 	Plug 'Yggdroot/indentLine'
 
 	Plug 'rstacruz/vim-closer'
+
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 let g:EasyMotion_smartcase = 1
+
 let g:indent_guides_enable_on_vim_startup = 1
+
+let g:deoplete#enable_at_startup = 1

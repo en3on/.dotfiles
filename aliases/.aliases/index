@@ -1,3 +1,4 @@
 . ~/.aliases/app-shortcuts.sh
 . ~/.aliases/directory
 . ~/.aliases/git
+. ~/.aliases/configs
