@@ -10,3 +10,4 @@ omap / <Plug>(easymotion-tn)
 nnoremap \ :nohlsearch<CR>
 
 " open FZF
+map <F3> :FZF!<CR>
