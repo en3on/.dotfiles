@@ -1,0 +1,2 @@
+" leader
+let mapleader=','
