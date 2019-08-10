@@ -3,3 +3,6 @@ alias gitdc='git diff --cached'
 
 # go to git root directory
 alias gitroot='cd $(git rev-parse --show-toplevel)'
+
+# ignore local file
+alias gitex='git update-index --skip-worktree'

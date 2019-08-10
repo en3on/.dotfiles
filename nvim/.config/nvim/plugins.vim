@@ -17,6 +17,11 @@ call plug#begin()
 	Plug 'rstacruz/vim-closer'
 
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+	" typescript
+	Plug 'leafgarland/typescript-vim'
+	" typescript end
+	
 call plug#end()
 
 let g:EasyMotion_smartcase = 1
