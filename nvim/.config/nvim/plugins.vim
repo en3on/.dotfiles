@@ -18,9 +18,15 @@ call plug#begin()
 
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+	Plug 'scrooloose/nerdcommenter'
+
 	" typescript
 	Plug 'leafgarland/typescript-vim'
 	" typescript end
+	
+	" python
+	Plug 'hdima/python-syntax'
+	" python end
 	
 call plug#end()
 
@@ -28,4 +34,5 @@ let g:EasyMotion_smartcase = 1
 
 let g:indent_guides_enable_on_vim_startup = 1
 
+" deoplete
 let g:deoplete#enable_at_startup = 1
