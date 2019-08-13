@@ -1,0 +1,1 @@
+alias netcon='nmcli device wifi rescan && sleep 5 && nmcli device wifi con I_USE_ARCH_BTW'

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+NETWORK=$1 || "I_USE_ARCH_BTW"
+
+echo "Scanning networks..."
+
+nmcli device wifi rescan
+
+sleep 5
+
+echo "Scanning Complete"
+
+echo "Connecting to $NETWORK"
+
+nmcli device wifi connect $NETWORK
