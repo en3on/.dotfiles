@@ -1,3 +1,3 @@
 startx &
-sudo unclutter --root -b &
+sudo unclutter -b &
 ~/.scripts/redshift-start.sh &
