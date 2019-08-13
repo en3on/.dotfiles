@@ -6,3 +6,6 @@ alias gitroot='cd $(git rev-parse --show-toplevel)'
 
 # ignore local file
 alias gitex='git update-index --skip-worktree'
+
+# check for debug statements
+alias gitcheck='find . -type f -exec grep -H "// debug" {} \;'

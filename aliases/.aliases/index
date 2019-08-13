@@ -2,3 +2,5 @@
 . ~/.aliases/directory
 . ~/.aliases/git
 . ~/.aliases/configs
+. ~/.aliases/ssh
+. ~/.aliases/lastpass

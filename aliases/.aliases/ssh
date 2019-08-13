@@ -1,0 +1,1 @@
+alias syncup='rsync -a ~/work en3on-compaq:/home/en3on/'
