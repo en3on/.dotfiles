@@ -24,6 +24,10 @@ call plug#begin()
 	Plug 'leafgarland/typescript-vim'
 	" typescript end
 	
+	" python
+	Plug 'hdima/python-syntax'
+	" python end
+	
 call plug#end()
 
 let g:EasyMotion_smartcase = 1
