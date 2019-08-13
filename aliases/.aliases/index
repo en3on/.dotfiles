@@ -4,3 +4,4 @@
 . ~/.aliases/configs
 . ~/.aliases/ssh
 . ~/.aliases/lastpass
+. ~/.aliases/network
