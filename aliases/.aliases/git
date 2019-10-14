@@ -1,6 +1,8 @@
 alias gitc='git commit'
 alias gitdc='git diff --cached'
 
+alias gfp='git fetch && git pull'
+
 # go to git root directory
 alias gitroot='cd $(git rev-parse --show-toplevel)'
 

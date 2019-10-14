@@ -85,6 +85,9 @@ export VIMM="~/.config/nvim/mappings.vim"
 export VIMC="~/.config/nvim/coc.vim"
 export VIMUM="~/.config/nvim/userMappings.vim"
 
+    # fix git stash issues
+export GIT_INTERNAL_GETTEXT_TEST_FALLBACKS=1
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -103,3 +106,5 @@ compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+clear

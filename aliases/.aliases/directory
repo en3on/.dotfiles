@@ -1,3 +1,4 @@
 alias coding='cd ~/coding'
 alias rrs='cd ~/coding/playground/ReqResScripts'
 alias ingui='cd ~/coding/intuition-ui/src/Intuition.Spa/src/app/'
+alias ing='cd ~/coding/intuition/src'
