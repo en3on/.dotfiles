@@ -1,3 +1,7 @@
+" ============================================================================ "
+" ===                              COC SETUP                               === "
+" ============================================================================ "
+
 inoremap <silent><expr> <leader>cs coc#refresh()
 
 " gd - go to definition of word under cursor
@@ -39,6 +43,19 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<Tab>" : coc#refresh()"
+inoremap <silent><expr> <Tab> 
+		\ pumvisible() ? "\<C-n>" : 
+		\ <SID>check_back_space() ? "\<Tab>" : 
+		\ coc#refresh()
 
-inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent><expr> <S-Tab>
+		\ pumvisible() ? "\<C-p>" :
+		\ "\<S-Tab>"
+
+"Close preview window when completion is done.
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" coc.nvim color changes
+hi! link CocErrorSign WarningMsg
+hi! link CocWarningSign Number
+hi! link CocInfoSign Type

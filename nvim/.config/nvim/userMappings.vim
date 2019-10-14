@@ -1,7 +1,3 @@
-nnoremap ]<space> o<ESC>k
-nnoremap [<space> O<ESC>j
-
-nnoremap <space>i O<ESC>o
 
 " close folds recursively
 nnoremap <leader>zc $v%zC
