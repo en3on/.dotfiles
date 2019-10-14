@@ -1,7 +1,8 @@
-inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <leader>cs coc#refresh()
 
 " gd - go to definition of word under cursor
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> tgd :call CocActionAsync('jumpDefinition', 'tab drop')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
 
 " gi - go to implementation
@@ -23,7 +24,6 @@ endfunction
 
 " symbols
 nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
-nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
 
 " view all errors
 nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<CR>
@@ -32,3 +32,13 @@ nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<CR>
 nmap <leader>cr  <Plug>(coc-rename)
 nmap <leader>cf  <Plug>(coc-format-selected)
 vmap <leader>cf  <Plug>(coc-format-selected)
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<Tab>" : coc#refresh()"
+
+inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

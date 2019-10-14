@@ -1,38 +1,45 @@
-call plug#begin()
-	Plug 'easymotion/vim-easymotion'
+call plug#begin('~/.local/share/nvim/plugged')
 
-	Plug 'tpope/vim-surround'
-	Plug 'tpope/vim-repeat'
-	Plug 'tpope/vim-unimpaired'
+	" Code Display
+	Plug 'sjl/gundo.vim'
+	Plug 'PProvost/vim-ps1'
+  Plug 'ntpeters/vim-better-whitespace'
 
-	Plug 'valloric/MatchTagAlways'
+	" Commands
+	Plug 'tomtom/tcomment_vim'
 
-	Plug 'vim-airline/vim-airline'
+	" Completion
+	Plug 'Raimondi/delimitMate'
+	Plug 'machakann/vim-sandwich'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'tpope/vim-endwise'
+  Plug 'mattn/emmet-vim'
 
-	Plug 'junegunn/fzf.vim'
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+	" File Navigation
+  Plug 'Shougo/denite.nvim'
 
-	Plug 'Yggdroot/indentLine'
+	" Integrations
+	Plug 'tpope/vim-fugitive'
+  " Plug 'cedarbaum/fugitive-azure-devops.vim'
 
-	Plug 'rstacruz/vim-closer'
-
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-	Plug 'scrooloose/nerdcommenter'
+	" Interface
+	Plug 'vim-scripts/YankRing.vim'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'bling/vim-airline'
 
 	" typescript
 	Plug 'leafgarland/typescript-vim'
-	" typescript end
-	
-	" python
-	Plug 'hdima/python-syntax'
-	" python end
-	
+
 call plug#end()
 
-let g:EasyMotion_smartcase = 1
 
-let g:indent_guides_enable_on_vim_startup = 1
+" === DelimitMate Setup ===
+let delimitMate_expand_cr = 2
+let delimitMate_expand_space = 1
+let delimitMate_balance_matchpairs = 1
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
+au FileType ps1 let b:delimitMate_autoclose = 0
+au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
+
+" === Denite Setup ===
+call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git'])
