@@ -1,1 +1,3 @@
-alias ing='cd /home/en3on/work/intuition-ui/src/Intuition.Spa/src/app/'
+alias coding='cd ~/coding'
+alias rrs='cd ~/coding/playground/ReqResScripts'
+alias ingui='cd ~/coding/intuition-ui/src/Intuition.Spa/src/app/'
